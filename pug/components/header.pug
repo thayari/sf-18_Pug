@@ -1,0 +1,10 @@
+header.header
+  div.container
+    .header__logo
+      img.logo(src="img/barber-logo.svg")
+
+    nav.menu
+      ul.menu__list
+        each value, index in {'Home' : 'home', 'History' : 'history', 'Services' : 'services', 'Gallery' : 'gallery'}
+          li.menu__item
+            a(href= "./#" + value)= index

@@ -1,0 +1,47 @@
+doctype html
+html(lang="ru-RU")
+//- Include head
+include ./components/head.pug  
+body
+  include ./components/header.pug
+  section#home
+    .container
+      .wrapper
+        h1.title1 #[span.highlight Hairstyle] Reflects The Personality Inside You
+        p It is a long established fact that a reader will be distracted by the readable content of a page when looking at.
+        button.btn Get Started
+  section#history
+    .whitebg
+      .container
+        .wrapper
+          h1.title1 Our #[span.highlight History]
+          p It is a long established fact that a reader will be distracted by the readable content of a page when looking at.
+          p It is a long established fact that a reader will be distracted by the readable content of a page when looking at.
+          button.btn Learn more
+  section#services
+    .whitebg
+      .container
+        h1.title1 Services We #[span.highlight Provide]
+        .cards-wrapper
+          .card
+            .card__icon.card__icon-haircut
+            h2.title2 Hair Cut
+            p long established fact that a reacted by the readable content of hen looking at.
+          .card
+            .card__icon.card__icon-beardcut
+            h2.title2 Beard Cut
+            p long established fact that a reacted by the readable content of hen looking at.
+          .card
+            .card__icon.card__icon-facialpack
+            h2.title2 Facial Pack
+            p long established fact that a reacted by the readable content of hen looking at.
+  section#gallery
+    .whitebg
+      .container
+        h1.title1 Our #[span.highlight Gallery]
+        .gallery__items
+          each i in [1, 2, 3, 4, 5, 6]
+            .gallery__item
+              img.gallery__img(src="./img/gallery" + i + ".jpg")
+        button.btn View All
+  include ./components/footer.pug
