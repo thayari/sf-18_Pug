@@ -5,7 +5,7 @@ var pug = require('gulp-pug');
 gulp.task('sass', function () {
   return gulp.src('style/*.sass')
     .pipe(sass())
-    .pipe(gulp.dest('build/style/'));
+    .pipe(gulp.dest('docs/style/'));
 });
 
 gulp.task('pug', function() {
@@ -13,7 +13,7 @@ gulp.task('pug', function() {
     .pipe(pug({
       pretty: true
     }))
-    .pipe(gulp.dest('build/'));
+    .pipe(gulp.dest('docs/'));
 })
 
 gulp.task('watch', function () {
